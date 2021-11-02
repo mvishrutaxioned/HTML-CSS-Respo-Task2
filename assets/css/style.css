@@ -127,7 +127,7 @@ nav h3 {
   color: #5f6bcc;
   font-weight: 800;
   letter-spacing: 4px;
-  padding-bottom: 2px;
+  padding-bottom: 5px;
   font-size: 22px;
 }
 /*=================================
@@ -231,7 +231,52 @@ nav h3 {
 .banner-content .slider-dots i { font-size: 14px; }
 /* banner ends */
 
-
+/* connect starts */
+.connect {
+  padding-bottom: 32px;
+  border-bottom: 2px solid #C4C6CB;
+}
+.connect > h1 {
+  color: #5f6bcc;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 42px;
+}
+.connect .wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.connect article {
+  padding: 0 42px;
+}
+.connect article h2 {
+  padding: 10px 30px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #4AEBB0;
+}
+.connect figcaption {
+  font-size: 14px;
+  font-weight: bold;
+  color: #666;
+  margin: 5px 90px;
+}
+.connect .stars {
+  padding: 10px 0 0 0;
+  color: #5f6bcc;
+}
+.connect article img {
+  width: 180px;
+  border: 2px solid #5f6bcc;
+}
+.connect article p {
+  padding: 20px 80px;
+  font-size: 14px;
+  color: #666;
+}
+/* connect ends */
 
 
 
