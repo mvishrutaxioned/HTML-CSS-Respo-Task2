@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Poppins&display=swap');
 /* ==========================================================================
    1. CSS Reset Code
    ========================================================================== */
@@ -83,7 +83,8 @@ sub { bottom: -.25em; }
 /*for all*/
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-family: "Lato", sans-serif;
 }
 
 a { 
@@ -125,16 +126,10 @@ nav img {
 nav h3 {
   color: #5f6bcc;
   font-weight: 800;
-  font-family: 'Poppins', sans-serif;
   letter-spacing: 4px;
   padding-bottom: 2px;
   font-size: 22px;
 }
-
-
-
-
-
 /*=================================
   Header styling ends here
 =================================*/  
@@ -142,8 +137,99 @@ nav h3 {
 /*=================================
   main styling starts here
 =================================*/
+/* banner starts */
+.banner {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  font-family: 'Lato', sans-serif;
+  border-bottom: 2px solid #C4C6CB;
+}
+.banner-info { padding: 40px 20px 40px 40px; }
 
+.banner-info h1, .banner-info h3 {
+  color: #5f6bcc;
+  padding-right: 65px;
+  font-family: 'Lato', sans-serif;
+}
+.banner-info h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.banner-info h3 { font-size: 23px; }
 
+.banner-info h3:nth-of-type(1) { margin: 8px 0 20px 0 }
+
+.banner-info h3:nth-of-type(2) { margin-bottom: 15px }
+
+.banner-info p {
+  font-size: 18px;
+  color: #666;
+  padding-right: 150px;
+  line-height: 27px;
+}
+.banner-info p a { color: #4AEBB0; }
+
+.banner-info .banner-links { margin-top: 24px; }
+
+.banner-info .banner-links a {
+  font-size: 23px;
+  margin-right: 10px;
+  color: white;
+  background-color: #4AEBB0;
+  padding: 14px 16px;
+  border-radius: 3px;
+}
+.banner-content {
+  background-color: #5f6bcc;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.banner-content p {
+  font-size: 18px;
+  line-height: 35px;
+}
+.banner-content p:nth-of-type(1) {
+  padding: 30px 100px 0 100px;
+  line-height: 30px;
+}
+.banner-content p:nth-of-type(2) {
+  padding: 5px 130px 0 130px;
+  line-height: 30px;
+}
+/* .banner-content .second {
+  margin: 0 100px;
+} */
+.banner-content p span { font-size: 30px; }
+
+.banner-content .but {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+.banner-content .but i {
+  font-size: 44px;
+  padding: 0 20px;
+}
+.but hr {
+  width: 100px;
+  margin: 0 10px;
+}
+.banner-content .employees { margin: 10px auto; }
+
+.banner-content .employees i {
+  font-size: 28px;
+  padding: 0 5px;
+}
+
+.banner-content .slider-dots { padding-top: 100px; }
+
+.banner-content .slider-dots i { font-size: 14px; }
+/* banner ends */
 
 
 
