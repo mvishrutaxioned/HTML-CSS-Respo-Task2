@@ -163,7 +163,7 @@ nav h3 {
 
 .banner-info p {
   font-size: 18px;
-  color: #666;
+  color: #99A19E;
   padding-right: 150px;
   line-height: 27px;
 }
@@ -240,7 +240,8 @@ nav h3 {
   color: #5f6bcc;
   font-size: 30px;
   font-weight: bold;
-  padding: 42px;
+  padding: 36px;
+  letter-spacing: 1px;
 }
 .connect .wrapper {
   width: 100%;
@@ -277,7 +278,47 @@ nav h3 {
   color: #666;
 }
 /* connect ends */
+/* working starts */
 
+.working {
+  padding: 42px;
+  border-bottom: 2px solid #C4C6CB;
+}
+.working h1 {
+  color: #5f6bcc;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: .6px;
+}
+.working .wrapper ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.working ul li {
+  padding: 40px;
+}
+.working ul li i {
+  font-size: 36px;
+  color: white;
+  background-color: #5f6bcc;
+  padding: 22px;
+  border-radius: 50%;
+}
+.working ul li h2 {
+  padding: 30px 10px 10px 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #666;
+}
+.working ul li p {
+  padding: 5px;
+  font-size: 20px;
+  color: #99A19E;
+}
+
+/* working ends */
 
 
 
