@@ -122,7 +122,7 @@ nav {
 
 nav img { width: 60px; }
 
-nav h3 {
+nav h1 {
   color: #5f6bcc;
   font-weight: 800;
   letter-spacing: 4px;
@@ -137,30 +137,32 @@ nav h3 {
   main styling starts here
 =================================*/
 /* banner starts */
-.banner {
+.banner .wrapper {
+  width: 100%;
   display: grid;
   grid-template-columns: 65% 35%;
   font-family: 'Lato', sans-serif;
   border-bottom: 2px solid #C4C6CB;
 }
+
 .banner-info { 
   width: 90%;
   padding: 40px 20px 40px 40px; 
 }
+
 .banner-info > h2, .banner-info h3 {
   color: #5f6bcc;
   padding: 0 100px 0 0;
   font-family: 'Lato', sans-serif;
 }
+
 .banner-info > h2 {
   font-size: 30px;
   font-weight: bold;
 }
 
 .banner-info h3 { font-size: 23px; }
-
 .banner-info h3:nth-of-type(1) { margin: 8px 0 20px 0 }
-
 .banner-info h3:nth-of-type(2) { margin-bottom: 15px }
 
 .banner-info p {
@@ -169,6 +171,7 @@ nav h3 {
   padding-right: 170px;
   line-height: 27px;
 }
+
 .banner-info p a { 
   color: #4AEBB0; 
   transition: .2s ease-in-out;
@@ -200,6 +203,17 @@ nav h3 {
   align-items: center;
   text-align: center;
 }
+.banner-content ul {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+}
+.banner-content ul li {
+  display: none;
+}
+.banner-content ul li:nth-of-type(3) {
+  display: initial;
+}
 .banner-content p {
   font-size: 18px;
   line-height: 35px;
@@ -216,24 +230,50 @@ nav h3 {
 .banner-content p span { font-size: 30px; }
 
 .banner-content .content-slider {
+  position: relative;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
+  margin: 20px 0;
 }
+
+.banner-content .content-slider span::after {
+  content: '';
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  right: 15%;
+  border-bottom: 1px solid white;
+}
+
+.banner-content .content-slider span::before {
+  content: '';
+  width: 30%;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  border-bottom: 1px solid white;
+}
+
 .banner-content .content-slider i {
+  position: absolute;
   font-size: 44px;
   padding: 0 20px;
   cursor: pointer;
   transition: .2s ease-in-out;
 }
 
-.banner-content .content-slider i:hover { color: #C4C6CB; }
-
-.content-slider hr {
-  width: 100px;
-  margin: 0 10px;
+.banner-content .content-slider i:nth-of-type(1) {
+  left: 0%;
 }
+
+.banner-content .content-slider i:nth-of-type(2) {
+  right: 0%;
+}
+
+.banner-content .content-slider i:hover { color: #C4C6CB; }
 
 .banner-content .employees { margin: 10px auto; }
 
@@ -265,29 +305,34 @@ nav h3 {
 .banner-content .slider-dots i:nth-of-type(3) { opacity: 1; }
 /* banner ends */
 
-/* connect starts */
+/* connect section styling starts */
 .connect {
-  padding-bottom: 32px;
+  padding: 32px 0;
   border-bottom: 2px solid #C4C6CB;
 }
-.connect > h2 {
+.connect .wrapper > h2 {
   color: #5f6bcc;
   font-size: 30px;
   font-weight: bold;
-  padding: 36px;
   letter-spacing: 1px;
+  text-align: left;
 }
 .connect .wrapper {
-  width: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.connect .wrapper .articles {
   display: flex;
   justify-content: space-between;
-  text-align: center;
+  margin-top: 40px;
 }
 
 .connect article { padding: 0 42px; }
 
-.connect article h2 {
-  padding: 10px 30px 0 30px;
+.connect article h3 {
+  padding: 10px 10px 0 10px;
   font-size: 22px;
   font-weight: bold;
   color: #4AEBB0;
@@ -297,18 +342,23 @@ nav h3 {
   letter-spacing: .5px;
   font-weight: bold;
   color: #99A19E;
-  margin: -10px 10px -20px 10px;
+  margin-bottom: 10px;
 }
 .connect .stars {
-  padding: 10px 0 0 0;
   color: #5f6bcc;
+}
+.connect .stars i {
+  margin: 0 5px;
+}
+.connect article {
+  text-align: center;
 }
 .connect article img {
   width: 180px;
   border: 2px solid #5f6bcc;
 }
 .connect article p {
-  padding: 20px 80px;
+  padding: 15px 50px 0 50px;
   font-size: 14px;
   color: #666;
 }
@@ -316,8 +366,11 @@ nav h3 {
 
 /* working starts */
 .working {
-  padding: 42px;
+  padding: 42px 0;
   border-bottom: 2px solid #C4C6CB;
+}
+.working .wrapper {
+  width: 90%;
 }
 .working .wrapper > h2 {
   color: #5f6bcc;
@@ -338,10 +391,19 @@ nav h3 {
   font-size: 36px;
   color: white;
   background-color: #5f6bcc;
-  padding: 22px;
   border-radius: 50%;
 }
-.working ul li h2 {
+.working ul li:nth-of-type(1) i {
+  padding: 22px 25px;
+}
+.working ul li:nth-of-type(2) i {
+  padding: 22px 27px;
+}
+.working ul li:nth-of-type(3) i {
+  padding: 24px 25px;
+  font-size: 32px;
+}
+.working ul li h3 {
   padding: 30px 10px 10px 10px;
   font-size: 22px;
   font-weight: bold;
@@ -362,50 +424,61 @@ nav h3 {
   footer styling starts here
 =================================*/ 
 /* testimonials starts */
-footer {
+.testimonial {
   background-color: #5f6bcc;
   color: white;
   position: relative;
 }
-footer .wrapper > h2 {
+.testimonial .wrapper > h2 {
   padding: 42px;
   margin-bottom: 20px;
   font-weight: bold;
   font-size: 30px;
   letter-spacing: 1px;
 }
-footer .wrapper .left-key, footer .wrapper .right-key {
+.testimonial .wrapper .left-key, footer .wrapper .right-key {
   cursor: pointer;
   transition: .2s ease-in-out;
 }
 
-footer .wrapper .left-key:hover, footer .wrapper .right-key:hover { color: #C4C6CB; }
+.testimonial .wrapper .left-key:hover, footer .wrapper .right-key:hover { color: #C4C6CB; }
 
-footer .wrapper .left-key {
+.testimonial .wrapper .left-key {
   position: absolute;
   font-size: 52px;
   top: 45%;
   bottom: 40%;
   left: 5%;
 }
-footer .wrapper .right-key {
+.testimonial .wrapper .right-key {
   position: absolute;
   font-size: 52px;
   top: 45%;
   bottom: 40%;
   right: 5%;
 }
-footer .wrapper p {
+.testimonial .wrapper p {
   padding: 0 140px 0 140px;
   font-size: 19px;
   color: white;
   text-align: center;
 }
-footer .slider-dots {
+.testimonial-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.testimonial-list li {
+  display: none;
+}
+.testimonial-list li:nth-of-type(4) {
+  display: initial;
+}
+.testimonial .slider-dots {
   text-align: center;
   padding: 42px 0;
 }
-footer .slider-dots i {
+.testimonial .slider-dots i {
   font-size: 20px;
   padding: 0 2px;
   opacity: .7;
@@ -413,9 +486,9 @@ footer .slider-dots i {
   transition: .2s ease-in-out;
 }
 
-footer .slider-dots i:hover { opacity: 1; }
+.testimonial .slider-dots i:hover { opacity: 1; }
 
-footer .slider-dots i:nth-of-type(4) { opacity: 1; }
+.testimonial .slider-dots i:nth-of-type(4) { opacity: 1; }
 /* testimonials ends */
 
  /*=================================
@@ -429,6 +502,7 @@ footer .slider-dots i:nth-of-type(4) { opacity: 1; }
 
   .banner { grid-template-columns: 60% 40%; }
 }
+
 @media only screen and (max-width: 1024px) {
   .banner-info .banner-links a { font-size: 14px; }
 
@@ -437,12 +511,22 @@ footer .slider-dots i:nth-of-type(4) { opacity: 1; }
   .connect article h2 { padding: 10px 25px; }
 
   .connect .wrapper p:nth-of-type(1) {
-    margin: -30px 10px -20px 10px;
+    margin-bottom: 10px;
   }
-}  
+}
+  
 @media only screen and (max-width: 995px) {
-  .banner { grid-template-columns: 1fr 1fr; }
-
+  .banner .wrapper {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+  .banner-content {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  .banner-content ul li {
+    width: 100%;
+  }
   .banner-info { 
     width: 100%;
     padding-bottom: 10px;
@@ -469,7 +553,7 @@ footer .slider-dots i:nth-of-type(4) { opacity: 1; }
   }
 }
 @media only screen and (max-width: 768px) {
-  .banner {
+  .banner .wrapper {
     grid-template-columns: 1fr;
     justify-items: center;
     padding: 0;
@@ -485,17 +569,18 @@ footer .slider-dots i:nth-of-type(4) { opacity: 1; }
   
   .banner-content .slider-dots { padding: 20px 0; }
 
-  .connect { text-align: center; }
+  .connect .wrapper h2 { text-align: center; }
 
   .connect article {
     margin: 20px auto;
   }
 
-  .connect .wrapper {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  .connect .wrapper .articles {
+    flex-direction: column;
+  }
+  
+  .connect .wrapper p:nth-of-type(1) {
+    margin-bottom: 0;
   }
 
   .working { text-align: center; }
@@ -509,49 +594,68 @@ footer .slider-dots i:nth-of-type(4) { opacity: 1; }
 
   .working .wrapper ul li { padding: 20px 80px; }
 
-  footer .wrapper { text-align: center; }
+  .testimonial .wrapper { text-align: center; }
 }
 @media only screen and (max-width: 540px) {
-  .banner {
+  .banner .wrapper {
     grid-template-columns: 1fr;
     justify-items: center;
     padding: 0;
     border-top: 2px solid #99A19E;
   }
 
-  .banner .banner-info { padding: 10px; }
-
+  .banner .banner-info { 
+    padding: 10px;
+  }
+  .banner-info p {
+    padding: 0;
+  }
+  .banner-info .banner-links a {
+    padding: 10px 8px;
+  }
   nav {
-    justify-content: center;
-    border: none
+    padding: 10px 20px;
+    border: none;
   }
 
-  nav h3 { font-size: 16px; }
+  nav h1 { font-size: 16px; }
 
-  .banner-content { 
+  .banner-content {
     width: 100%;
     padding: 0;
    }
-
-  .banner-content p { padding: 0; }
-
-  .banner-content .content-slider hr { width: 80px; }
+   .banner-content ul li {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: flex-start;
+   }
+   .banner-content ul li {
+    display: none;
+  }
+  .banner-content ul li:nth-of-type(3) {
+    display: initial;
+  }
+  .banner-content p {
+    width: 100%;
+    text-align: center;
+   }
   
   .banner-content .slider-dots { padding: 20px 0; }
 
   .working .wrapper ul li { padding: 10px; }
 
-  footer .wrapper > h2 { padding-bottom: 10px; }
+  .testimonial .wrapper > h2 { padding-bottom: 10px; }
 
-  footer .wrapper p {
+  .testimonial .wrapper p {
     padding: 0 40px;
     font-size: 14px;
   }
-  footer .wrapper .left-key {
+  .testimonial .wrapper .left-key {
     font-size: 24px;
     left: 2%;
   }
-  footer .wrapper .right-key {
+  .testimonial .wrapper .right-key {
     font-size: 24px;
     right: 2%;
   }
